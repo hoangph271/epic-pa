@@ -1,0 +1,324 @@
+* {
+  font-family: 'Mali', cursive;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+.hidden {
+  display: none!important;
+}
+
+body {
+  margin: 0;
+}
+
+.screen-section {
+  height: max-content;
+  width: 100%;
+  text-align: center;
+}
+
+.section-one {
+  background-image: url(/static/gravity-falls.jpg);
+  background-size: cover;
+}
+
+.section-two {
+  display: none;
+}
+
+.section-four {
+  background-color: aliceblue;
+}
+
+.pa-ava-container {
+  padding: 20px 0;
+}
+
+.pa-ava {
+  cursor: pointer;
+  background-image: url(/static/doraemon.jpg);
+  height: 250px;
+  width: 250px;
+  margin: auto;
+  display: block;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.pa-ava.changed {
+  background-image: url(/static/pa-2017.jpg);
+}
+
+.top-banner {
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: xx-large;
+  text-align: center;
+  background-color: rgb(32, 206, 245);
+  color: white;
+}
+
+.top-content {
+  height: calc(100% - 340px);
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.top-content>.content-box {
+  padding: 15px;
+  height: 100%;
+  width: 100%;
+  border: 2px solid gray;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  overflow: auto;
+}
+
+.top-content>.content-box>div {
+  text-align: start;
+  font-size: larger;
+}
+
+.left-panel, .right-panel {
+  padding: 5px;
+  float: none;
+  width: 100%;
+  height: 150px;
+}
+
+.center-view {
+  width: 100%;
+  height: calc(100% - 300px);
+  margin: auto;
+  display: inline-block;
+}
+
+.title-section {
+  height: 30px;
+  line-height: 30px;
+}
+
+.description-section {
+  height: 60px;
+}
+
+.above-footer {
+  height: calc(100% - 120px);
+}
+
+.section-header {
+  background-color: black;
+  color: white;
+  height: 60px;
+  width: 100%;
+}
+
+.music-her-box, .music-me-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.music-banner {
+  width: calc(100% - 120px);
+  display: inline-block;
+  height: 100%;
+}
+
+.music-her-box {
+  background-image: url(/static/me.jpg);
+  float: left;
+}
+
+.music-me-box {
+  background-image: url(/static/me.jpg);
+  float: right;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+}
+
+.song-ava {
+  width: 100%;
+  padding: 10px;
+  display: none;
+}
+
+.song-ava>img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.song-elem {
+  cursor: pointer;
+  text-align: left;
+  padding: 2px;
+  border-top: 1px solid gray;
+}
+
+.song-elem:hover, .playing-song {
+  color: white;
+  background-color: gray;
+}
+
+.song-elem:last-child {
+  border-bottom: 1px solid gray;
+}
+
+.video-container,.the-video {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.the-video {
+  touch-action: pan-y;
+  background-color: black;
+  cursor: pointer;
+}
+
+.video-paused>.the-video {
+  filter: brightness(50%);
+}
+
+.play-button {
+  display: none;
+  cursor: pointer;
+}
+
+.video-paused>.play-button {
+  display: block;
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+}
+
+.mv-holder {
+  width: 100%;
+  height: calc(100% - 90px);
+}
+
+.yt-playlist {
+  width: 100%;
+  height: 100%;
+}
+
+.music-video {
+  display: block;
+  background-color: black;
+}
+
+@media only screen and (min-width: 600px) {
+  .pa-ava {
+    height: 200px;
+    width: 200px;
+  }
+  .top-content {
+    height: calc(100% - 290px);
+    padding: 20px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .song-ava {
+    display: block;
+  }
+
+  .left-panel {
+    float: left;
+    width: 200px;
+    height: 100%;
+  }
+
+  .center-view {
+    width: calc(100% - 400px);
+    height: 100%;
+  }
+
+  .right-panel {
+    float: right;
+    width: 200px;
+    height: 100%;
+  }
+}
+
+.section-three {
+  background-color: white;
+  position: relative;
+  background-image: url(/static/gravity-falls.jpg);
+}
+
+.her-pics {
+  padding: 20px;
+  height: 100%;
+  width: max-content;
+}
+
+.her-pic {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url(/static/her-pics/pa-1.jpg); */
+  /* background-color: black; */
+  background-color: rgba(255, 255, 255, 0.4);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+span.prev, span.next {
+  top: 0;
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  background-size: 50px;
+  width: 65px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.text-frame {
+  /* border: 2px solid gray; */
+  /* padding: 5px; */
+  /* border-radius: 5px; */
+  width: calc(100% - 120px);
+  margin: auto;
+  font-size: xx-large;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid gray;
+  border-radius: 15px;
+  padding: 3px;
+}
+
+span.prev:hover, span.next:hover {
+  opacity: 1;
+}
+
+span.prev {
+  left: 0;
+  background-image: url(/static/prev.png);
+}
+
+span.next {
+  right: 0;
+  background-image: url(/static/next.png);
+}
+
+.hidden-footer>div {
+  display: none;
+}
